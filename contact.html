@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marcos Blanco Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body id="contact">
+    <div id="links">
+      <a href="https://www.github.com/MarcosHBlanco" target="_blank"
+        ><img src="./imgs/github64px.png"
+      /></a>
+      <a href="https://www.linkedin.com/in/marcoshblanco/" target="_blank"
+        ><img src="./imgs/linkedin64px.png"
+      /></a>
+      <a href="index.html"
+        ><img id="myLogo" src="./imgs/myLogo-bgremoved.png"
+      /></a>
+    </div>
+    <div class="menu-container">
+      <div class="menu-button">
+        <div class="middle-line"></div>
+      </div>
+      <ul class="menu-list">
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="aboutme.html">About</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
+    </div>
+    <div id="introduction">
+      <p>
+        Got a project or an opportunity? <br />I'm a computer science student
+        eager to contribute and grow.<br />Let's connect!
+      </p>
+    </div>
+    <div class="form-container">
+      <form action="https://formspree.io/f/xzzbedba" method="post">
+        <div class="input-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="input-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

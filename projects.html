@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marcos Blanco Portfolio</title>
+    <link rel="stylesheet" href="./css/projects.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="menu-container">
+      <div class="menu-button">
+        <div class="middle-line"></div>
+      </div>
+      <ul class="menu-list">
+        <li>
+          <a
+            href="projects.html"
+            class="text-decoration-none"
+            style="color: #6a0dad"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a
+            href="aboutme.html"
+            class="text-decoration-none"
+            style="color: #6a0dad"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="hobbies.html"
+            class="text-decoration-none"
+            style="color: #6a0dad"
+            >Hobbies</a
+          >
+        </li>
+        <li>
+          <a
+            href="contact.html"
+            class="text-decoration-none"
+            style="color: #6a0dad"
+            >Contacts</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div id="links">
+      <a href="https://www.github.com/MarcosHBlanco" target="_blank"
+        ><img src="./imgs/github64px.png"
+      /></a>
+      <a href="https://www.linkedin.com/in/marcoshblanco/" target="_blank"
+        ><img src="./imgs/linkedin64px.png"
+      /></a>
+      <a href="index.html"
+        ><img id="myLogo" src="./imgs/myLogo-bgremoved.png"
+      /></a>
+    </div>
+    <h1 class="mt-5">Projects</h1>
+    <div class="projects-container">
+      <div class="project-card">
+        <h2 class="project-title">FireShip</h2>
+        <img
+          src="./imgs/fireship.png"
+          alt="Project Image 1"
+          class="project-image"
+        />
+        <p class="project-description">
+          This was my first project in Unity, a classic 2D space shooter.
+          <br /><br />
+          <span style="color: #6a0dad; font-weight: bold">Goal</span>: Learn
+          Unity basics <br /><br />
+        </p>
+        <p class="d-inline-flex gap-1">
+          <button
+            class="btn"
+            style="background-color: #6a0dad; color: white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#journeyFire"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+          >
+            Journey
+          </button>
+          <button
+            class="btn"
+            style="background-color: #6a0dad; color: white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#learningFire"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+          >
+            What I Learned
+          </button>
+        </p>
+        <div class="collapse" id="journeyFire">
+          <div class="card card-body">
+            I began by researching independently on YouTube coding channels,
+            eager to learn the basics of Unity. Games have always been a
+            passion, so I decided to dive into game development with something
+            straightforward. However, it quickly turned into a real challenge,
+            especially when learning Unity’s core features like C# scripting and
+            handling game physics. <br /><br />After persistent work, I
+            completed the game, and it’s now available to play and test!
+            <br /><br />
+          </div>
+        </div>
+        <div class="collapse" id="learningFire">
+          <div class="card card-body">
+            To make this project, I had to learn and apply: <br />✓ Player
+            Movement <br />✓ Enemy Spawning <br />
+            ✓ Collision Detection<br />
+            ✓ Shooting Mechanics<br />✓ Scoring System
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <h2 class="project-title">Tic-Tac-Toe</h2>
+        <img
+          src="./imgs/tic-tac-toe.png"
+          alt="Project Image 2"
+          class="project-image"
+        />
+        <p class="project-description">
+          For my second project, I created a classic Tic-Tac-Toe game using
+          React. <br /><br />
+          <span style="color: #6a0dad; font-weight: bold">Goal</span>: to dive
+          into front-end frameworks <br />
+        </p>
+        <p class="d-inline-flex gap-1">
+          <button
+            class="btn"
+            style="background-color: #6a0dad; color: white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#journeyTic"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+          >
+            Journey
+          </button>
+          <button
+            class="btn"
+            style="background-color: #6a0dad; color: white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#learningTic"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+          >
+            What I Learned
+          </button>
+        </p>
+        <div class="collapse" id="journeyTic">
+          <div class="card card-body">
+            <p>
+              During my framework search I chose
+              <span class="d-inline" style="color: #6a0dad; font-weight: bold"
+                >React</span
+              >
+              and enrolled in a course on Udemy. This project was one of the
+              most challenging tasks I’ve faced so far, but I pushed through and
+              successfully completed it! <br /><br />
+            </p>
+          </div>
+        </div>
+        <div class="collapse" id="learningTic">
+          <div class="card card-body">
+            <p>
+              In building this project, I learned and applied key <br />
+              <span style="color: #6a0dad; font-weight: bold"
+                >React concepts</span
+              ><br />✓ Components<br />
+              ✓ State Management<br />
+              ✓ Props <br />✓ Event Handling <br />✓ Conditional Rendering
+              <br />✓ React Developer Tools <br />✓ CSS Styling<br /><br />Completing
+              this project solidified my understanding of React fundamentals and
+              gave me confidence to tackle more complex projects using this
+              powerful framework. <br /><br />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h2 class="project-title">ToDo List</h2>
+        <img
+          src="./imgs/todolistproj.png"
+          alt="Project Image 4"
+          class="project-image"
+        />
+        <p class="project-description">
+          For my third project, I created a simple To-Do List web app using only
+          JavaScript for functionality and Bootstrap for styling.
+          <br /><br />
+          <span style="color: #6a0dad; font-weight: bold">Goal</span>: to dive
+          deeper into JavaScript, especially working with local storage, while
+          also learning the basics of Bootstrap.
+        </p>
+        <p class="d-inline-flex gap-1">
+          <button
+            class="btn"
+            style="background-color: #6a0dad; color: white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#journeyTodo"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+          >
+            Journey
+          </button>
+          <button
+            class="btn"
+            style="background-color: #6a0dad; color: white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#learningTodo"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+          >
+            What I Learned
+          </button>
+        </p>
+        <div class="collapse" id="journeyTodo">
+          <div class="card card-body">
+            <p>
+              I wanted to develop a To-Do List web app to deepen my
+              understanding of JavaScript functionalities and explore local
+              storage as an efficient way to save and retrieve user data
+              locally. This project taught me how to effectively manipulate
+              data, implement key JavaScript methods, and enhance the user
+              experience by enabling data persistence. Working with local
+              storage not only reinforced my knowledge of JavaScript but also
+              gave me valuable insights into optimizing data handling for web
+              applications. <br />This project turned out to be both fun and
+              educational!
+            </p>
+          </div>
+        </div>
+        <div class="collapse" id="learningTodo">
+          <div class="card card-body">
+            <p>
+              In developing this app, I worked with several key JavaScript and
+              Bootstrap concepts: <br /><br />
+              <span style="color: #6a0dad; font-weight: bold"
+                >JavaScript Concepts</span
+              >
+              <br />✓ DOM Manipulation <br />✓ Event Handling<br />✓ Local
+              Storage<br />
+              ✓ Array Methods<br /><br />
+              <span style="color: #6a0dad; font-weight: bold"
+                >Bootstrap Concepts</span
+              >
+              <br />
+              ✓ Responsive Design <br />
+              ✓Buttons and Forms <br />
+              ✓ Cards <br /><br />Completing this project helped me solidify my
+              JavaScript skills, especially with local storage, while giving me
+              a good introduction to Bootstrap’s quick, responsive styling
+              capabilities.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <h2 class="project-title">Stream.io</h2>
+        <img
+          src="./imgs//streaming-example.webp"
+          alt="Project Image 3"
+          class="project-image"
+        />
+        <p class="project-description">
+          The fourth project is a streaming homepage web app inspired by popular
+          platforms like Disney+ and Amazon Prime.<br /><br /><span
+            style="color: #6a0dad; font-weight: bold"
+            >Goal</span
+          >: to delve deeper into Bootstrap components and classes. <br /><br />
+        </p>
+        <p class="d-inline-flex gap-1">
+          <button
+            class="btn"
+            style="background-color: #6a0dad; color: white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#journeyStream"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+          >
+            Journey
+          </button>
+          <button
+            class="btn"
+            style="background-color: #6a0dad; color: white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#learningStream"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+          >
+            What I Learned
+          </button>
+        </p>
+        <div class="collapse" id="journeyStream">
+          <div class="card card-body">
+            <p>
+              I built this project using
+              <span style="color: #6a0dad; font-weight: bold">Bootstrap</span>
+              as a Minimal Viable Product
+              <span style="color: #6a0dad; font-weight: bold">(MVP)</span> to
+              gain a solid understanding of front-end development and layout
+              structuring. The MVP focused on creating a streamlined, functional
+              interface that highlights core elements like navigation, content
+              sections, and responsive design. By leveraging Bootstrap’s
+              component-based structure, I could quickly prototype an adaptable,
+              visually clean layout that captures the essentials. This MVP
+              version reflects the approach companies often require—prioritizing
+              core functionality and usability before moving on to more complex
+              features.
+            </p>
+          </div>
+        </div>
+        <div class="collapse" id="learningStream">
+          <div class="card card-body">
+            <p>
+              In building this web app, I focused on applying Bootstrap’s
+              components, such as cards for displaying movie thumbnails, a
+              navbar for easy navigation, and carousels to highlight featured
+              content. This project helped me strengthen my understanding of
+              Bootstrap's utility classes and responsive design techniques,
+              giving me a solid foundation for future web design and front-end
+              projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

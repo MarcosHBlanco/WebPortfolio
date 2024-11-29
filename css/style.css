@@ -1,0 +1,1354 @@
+/* Small Displays */
+
+@media (max-width: 600px) {
+	/* About me page */
+	#aboutMe {
+		#h1About {
+			border-bottom: 2px solid #6a0dad;
+			margin-top: 80px;
+			font-size: 30px;
+			color: black;
+		}
+		#welcome {
+			margin: 20px 30px;
+			font-size: xx-large;
+			font-weight: bold;
+		}
+		#aboutMeContent {
+			text-align: left;
+			margin: 0 50px;
+			font-size: 20px;
+		}
+		#funFacts {
+			margin: 20px 30px;
+			font-size: xx-large;
+			font-weight: bold;
+		}
+		#funFactsP {
+			text-align: left;
+			margin: 0 50px;
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	/* End of About m page */
+
+	body {
+		margin: 0;
+		padding: 0;
+		box-sizing: border;
+		color: black;
+	}
+
+	.menu-container {
+		position: fixed;
+		top: 5px;
+		right: 5px;
+		margin-right: 0;
+		width: 30px;
+	}
+	.menu-button {
+		width: 25px;
+		height: 25px;
+		position: relative;
+		cursor: pointer;
+		transition: all 0.4s ease;
+	}
+	/* Burger menu lines */
+	.menu-button::before,
+	.menu-button::after,
+	.middle-line {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 0.7px;
+		background-color: black;
+		transition: all 0.4s ease;
+	}
+	/* Position lines */
+	.menu-button::before {
+		top: 3px;
+		left: 0;
+	}
+	.menu-button::after {
+		bottom: 3px;
+		left: 0;
+	}
+	.middle-line {
+		opacity: 0.5;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+	/* Open menu - animate into X*/
+
+	.menu-button.active::before {
+		transform: rotate(45deg) translate(6.3px, 6.3px);
+	}
+	.menu-button.active::after {
+		transform: rotate(-45deg) translate(6.3px, -6.3px);
+	}
+
+	.menu-button.active .middle-line {
+		opacity: 0;
+	}
+	/* Hidden menu */
+	.menu-list {
+		width: 80px;
+		list-style: none;
+		padding: 0;
+		margin: 10px 0 0;
+		transform: translateX(-30%); /* Initially off-screen */
+		opacity: 0;
+		transition: all 0.5s ease; /* Sliding and fading effect */
+	}
+	/* Show menu */
+	.menu-list.active {
+		transform: translateX(-70px); /* Slides into view */
+		opacity: 1; /* Fade in */
+	}
+	.menu-list li {
+		text-align: center;
+		color: #c5c6c7;
+		margin: 5px 0;
+		background-color: white;
+		padding: 5px;
+		border: 2px solid #6a0dad;
+		border-radius: 3px;
+		opacity: 1;
+		transition: all 0.5s ease;
+	}
+	.menu-list li:hover {
+		transform: translateX(-20px);
+		color: black;
+		transition: all 0.5s ease;
+	}
+	header {
+		margin: 40px 0;
+	}
+	h1 {
+		font-family: "Inter";
+		font-size: 100px;
+		color: #66fcf1;
+		text-align: center;
+		margin: 0;
+	}
+	h2 {
+		margin: 0 0 40px 0;
+		text-align: center;
+		font-size: 15px;
+	}
+	#contact #introduction {
+		margin: 100px 20px 20px;
+		font-size: 20px;
+	}
+	#introduction {
+		margin: 40px 0;
+		padding: 15px;
+		text-align: center;
+		padding: 0 30px;
+		font-size: 24px;
+	}
+	#aboutWrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 30px 0;
+		height: fit-content;
+		font-size: 16px;
+	}
+	#vertical {
+		border-left: 2px solid grey;
+		height: 100%;
+	}
+	#vertical p {
+		padding-left: 10px;
+	}
+	#links {
+		position: absolute;
+		top: 0;
+		left: 10px;
+		margin: 10px 0;
+	}
+	#links a img {
+		width: 40px;
+	}
+	#links :first-child {
+		margin-right: 10px;
+	}
+	#projects {
+		margin: 40px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-family: sans-serif;
+	}
+	.projectWrapper {
+		margin: 20px 0;
+		position: relative;
+		width: 300px;
+		height: 200px;
+		overflow: hidden;
+		border-radius: 5px;
+		transition: transform 0.3s ease;
+	}
+	.projectDescShow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.7);
+		color: white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+	.projectWrapper:hover .projectDescShow {
+		opacity: 1;
+	}
+	.projectDescShow p {
+		font-size: 1.2em;
+		margin: 10px 0;
+	}
+
+	.projectDescShow .button {
+		margin: 5px;
+		padding: 8px 16px;
+		color: white;
+		text-decoration: none;
+		border: 2px solid #45a29e;
+		border-radius: 5px;
+		background-color: transparent;
+		transition: background-color 0.3s, color 0.3s;
+	}
+	.projectDescShow .button:hover {
+		background-color: #45a29e;
+		color: white;
+	}
+	#project1 {
+		background-image: url(../imgs/fireship.png);
+		background-size: cover;
+		background-position: center;
+	}
+	#project2 {
+		background-image: url(../imgs/tic-tac-toe.png);
+		background-size: cover;
+		background-position: center;
+	}
+	#project3 {
+		background-image: url(../imgs/streamio.png);
+		background-size: cover;
+		background-position: center;
+	}
+	#project4 {
+		background-image: url(../imgs/todolistproj.png);
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.form-container {
+		width: inherit;
+		height: 100vh;
+		padding: 20px;
+		background-color: #ffffff;
+	}
+
+	.input-group {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 20px;
+	}
+
+	label {
+		margin-bottom: 5px;
+		font-size: 16px;
+		color: #666;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	textarea {
+		padding: 10px;
+		font-size: 16px;
+		border: 1px solid #ddd;
+		border-radius: 6px;
+		background-color: #f9f9f9;
+		outline: none;
+	}
+
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	textarea:focus {
+		border-color: #ccc;
+	}
+
+	textarea {
+		resize: none;
+	}
+
+	button {
+		margin-top: 20px;
+		padding: 12px 24px;
+		font-size: 18px;
+		font-weight: bold;
+		color: #6a0dad;
+		background-color: transparent;
+		border: 2px solid #6a0dad;
+		border-radius: 30px;
+		cursor: pointer;
+		outline: none;
+		transition: background-color 0.3s, color 0.3s;
+	}
+
+	button:hover {
+		background-color: #6a0dad;
+		color: #fff;
+	}
+	footer {
+		border: 3px solid #6a0dad;
+		border-radius: 10px;
+		padding: 20px;
+		text-align: center;
+		font-size: 1.2em;
+		font-family: Arial, sans-serif;
+		margin: 50px;
+		background-color: #ffffff; /* Light background to contrast with border */
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+	}
+	#borderDiv {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	#mail {
+		display: flex;
+		align-items: center;
+		gap: 8px; /* Space between text and icon */
+		padding: 5px 15px;
+		border-radius: 13px;
+		border: 2px solid #6a0dad;
+		background-color: white;
+		transition: background-color 0.3s ease, border-color 0.3s ease;
+	}
+
+	#mail:hover {
+		background-color: #6a0dad;
+		border-color: #6a0dad;
+	}
+
+	#mail p {
+		margin: 0;
+		font-weight: bold;
+		color: #6a0dad;
+		transition: color 0.3s ease;
+	}
+
+	#mail:hover p {
+		color: white;
+	}
+
+	#mail img {
+		transition: transform 0.3s ease;
+	}
+
+	#mail:hover img {
+		transform: scale(1.1); /* Slightly increase icon size on hover */
+	}
+	.animation {
+		margin: 20px 0;
+	}
+	#mail a {
+		display: flex;
+		align-items: center;
+		color: inherit;
+		text-decoration: none;
+	}
+	.animation:hover {
+		margin: 20px 0;
+		background-image: none;
+		background: black;
+	}
+	@keyframes appear {
+		from {
+			opacity: 0;
+			transform: translateX(-100px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+	.animation {
+		animation: appear linear forwards;
+		animation-timeline: view();
+		animation-range: entry 0% cover 30%;
+	}
+	.footerAppear {
+		animation: appear linear forwards;
+		animation-timeline: view();
+		animation-range: entry 0 cover 10%;
+	}
+}
+
+/* Medium Displays */
+@media (601px <= width <= 1023px) {
+	body {
+		margin: 0;
+		padding: 0;
+		box-sizing: border;
+		color: black;
+	}
+
+	.menu-container {
+		position: fixed;
+		top: 5px;
+		right: 5px;
+		margin-right: 0;
+		width: 30px;
+	}
+	.menu-button {
+		width: 25px;
+		height: 25px;
+		position: relative;
+		cursor: pointer;
+		transition: all 0.4s ease;
+	}
+	/* Burger menu lines */
+	.menu-button::before,
+	.menu-button::after,
+	.middle-line {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 0.7px;
+		background-color: black;
+		transition: all 0.4s ease;
+	}
+	/* Position lines */
+	.menu-button::before {
+		top: 3px;
+		left: 0;
+	}
+	.menu-button::after {
+		bottom: 3px;
+		left: 0;
+	}
+	.middle-line {
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+	/* Open menu - animate into X*/
+	.menu-button.active {
+		border-radius: 50%;
+	}
+	.menu-button.active::before {
+		transform: rotate(45deg) translate(6.3px, 6.3px);
+	}
+	.menu-button.active::after {
+		transform: rotate(-45deg) translate(6.3px, -6.3px);
+	}
+	.middle-line {
+		opacity: 1;
+	}
+	.menu-button.active .middle-line {
+		opacity: 0;
+	}
+	/* Hidden menu */
+	.menu-list {
+		width: 80px;
+		list-style: none;
+		padding: 0;
+		margin: 10px 0 0;
+		transform: translateX(-30%); /* Initially off-screen */
+		opacity: 0;
+		transition: all 0.5s ease; /* Sliding and fading effect */
+	}
+	/* Show menu */
+	.menu-list.active {
+		transform: translateX(-70px); /* Slides into view */
+		opacity: 1; /* Fade in */
+	}
+	.menu-list li {
+		text-align: center;
+		color: #c5c6c7;
+		margin: 5px 0;
+		background-color: white;
+		padding: 5px;
+		border: 2px solid #6a0dad;
+		border-radius: 3px;
+		opacity: 1;
+		transition: all 0.5s ease;
+	}
+	.menu-list li:hover {
+		transform: translateX(-20px);
+		color: black;
+		transition: all 0.5s ease;
+	}
+	header {
+		margin: 40px 0;
+	}
+	h1 {
+		font-family: "Inter";
+		font-size: 100px;
+		color: #66fcf1;
+		text-align: center;
+		margin: 0;
+	}
+	h2 {
+		margin: 0 0 40px 0;
+		text-align: center;
+		font-size: 15px;
+	}
+	#contact #introduction {
+		margin: 100px 20px 20px;
+		font-size: 20px;
+	}
+	#introduction {
+		margin: 40px 0;
+		padding: 15px;
+		text-align: center;
+		padding: 0 30px;
+		font-size: 24px;
+	}
+	#aboutWrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 30px 0;
+		height: fit-content;
+		font-size: 16px;
+	}
+	#vertical {
+		border-left: 2px solid grey;
+		height: 100%;
+	}
+	#vertical p {
+		padding-left: 10px;
+	}
+	#links {
+		position: absolute;
+		top: 0;
+		left: 10px;
+		margin: 10px 0;
+	}
+	#links a img {
+		width: 40px;
+	}
+	#links :first-child {
+		margin-right: 10px;
+	}
+	#projects {
+		margin: 40px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-family: sans-serif;
+	}
+	.projectWrapper {
+		margin: 20px 0;
+		position: relative;
+		width: 300px;
+		height: 200px;
+		overflow: hidden;
+		border-radius: 5px;
+		transition: transform 0.3s ease;
+	}
+	.projectDescShow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.7);
+		color: white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+	.projectWrapper:hover .projectDescShow {
+		opacity: 1;
+	}
+	.projectDescShow p {
+		font-size: 1.2em;
+		margin: 10px 0;
+	}
+
+	.projectDescShow .button {
+		margin: 5px;
+		padding: 8px 16px;
+		color: white;
+		text-decoration: none;
+		border: 2px solid #45a29e;
+		border-radius: 5px;
+		background-color: transparent;
+		transition: background-color 0.3s, color 0.3s;
+	}
+	.projectDescShow .button:hover {
+		background-color: #45a29e;
+		color: white;
+	}
+	#project1 {
+		background-image: url(../imgs/fireship.png);
+		background-size: cover;
+		background-position: center;
+	}
+	#project2 {
+		background-image: url(../imgs/tic-tac-toe.png);
+		background-size: cover;
+		background-position: center;
+	}
+	#project3 {
+		background-image: url(../imgs/streaming-example.webp);
+		background-size: cover;
+		background-position: center;
+	}
+	#project4 {
+		background-image: url(../imgs/todolistproj.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.form-container {
+		width: inherit;
+		height: 100vh;
+		padding: 20px;
+		background-color: #ffffff;
+	}
+
+	.input-group {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 20px;
+	}
+
+	label {
+		margin-bottom: 5px;
+		font-size: 16px;
+		color: #666;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	textarea {
+		padding: 10px;
+		font-size: 16px;
+		border: 1px solid #ddd;
+		border-radius: 6px;
+		background-color: #f9f9f9;
+		outline: none;
+	}
+
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	textarea:focus {
+		border-color: #ccc;
+	}
+
+	textarea {
+		resize: none;
+	}
+
+	button {
+		margin-top: 20px;
+		padding: 12px 24px;
+		font-size: 18px;
+		font-weight: bold;
+		color: #6a0dad;
+		background-color: transparent;
+		border: 2px solid #6a0dad;
+		border-radius: 30px;
+		cursor: pointer;
+		outline: none;
+		transition: background-color 0.3s, color 0.3s;
+	}
+
+	button:hover {
+		background-color: #6a0dad;
+		color: #fff;
+	}
+	footer {
+		border: 3px solid #6a0dad;
+		border-radius: 10px;
+		padding: 20px;
+		text-align: center;
+		font-size: 1.2em;
+		font-family: Arial, sans-serif;
+		margin: 50px;
+		background-color: #ffffff; /* Light background to contrast with border */
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+	}
+	#borderDiv {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	#mail {
+		display: flex;
+		align-items: center;
+		gap: 8px; /* Space between text and icon */
+		padding: 5px 15px;
+		border-radius: 13px;
+		border: 2px solid #6a0dad;
+		background-color: white;
+		transition: background-color 0.3s ease, border-color 0.3s ease;
+	}
+
+	#mail:hover {
+		background-color: #6a0dad;
+		border-color: #6a0dad;
+	}
+
+	#mail p {
+		margin: 0;
+		font-weight: bold;
+		color: #6a0dad;
+		transition: color 0.3s ease;
+	}
+
+	#mail:hover p {
+		color: white;
+	}
+
+	#mail img {
+		transition: transform 0.3s ease;
+	}
+
+	#mail:hover img {
+		transform: scale(1.1); /* Slightly increase icon size on hover */
+	}
+	.animation {
+		margin: 20px 0;
+	}
+	#mail a {
+		display: flex;
+		align-items: center;
+		color: inherit;
+		text-decoration: none;
+	}
+	.animation:hover {
+		margin: 20px 0;
+		background-image: none;
+		background: black;
+	}
+	@keyframes appear {
+		from {
+			opacity: 0;
+			transform: translateX(-100px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+	.animation {
+		animation: appear linear forwards;
+		animation-timeline: view();
+		animation-range: entry 0% cover 30%;
+	}
+	.footerAppear {
+		animation: appear linear forwards;
+		animation-timeline: view();
+		animation-range: entry 0 cover 10%;
+	}
+	/* Contact Page */
+	#contact {
+		#introduction p {
+			text-align: center;
+			font-size: 1.5em;
+		}
+		.form-container {
+			display: flex;
+			justify-content: center;
+			border-top: 2px solid #6a0dad;
+			width: 100vw;
+			height: 100vh;
+			background-color: #ffffff;
+		}
+
+		.input-group {
+			display: flex;
+			flex-direction: column;
+			margin: 20px 0;
+			width: 400px;
+		}
+		.input-group label {
+			margin: 0 10px;
+		}
+		label {
+			font-size: 16px;
+			color: #666;
+		}
+
+		input[type="text"] {
+			padding: 10px;
+			font-size: 16px;
+			border: 1px solid #ddd;
+			border-radius: 6px;
+			background-color: #f9f9f9;
+			outline: none;
+			width: 100%;
+		}
+		input[type="email"] {
+			padding: 10px;
+			font-size: 16px;
+			border: 1px solid #ddd;
+			border-radius: 6px;
+			background-color: #f9f9f9;
+			outline: none;
+			width: 100%;
+		}
+		textarea {
+			padding: 10px;
+			font-size: 16px;
+			border: 1px solid #ddd;
+			border-radius: 6px;
+			background-color: #f9f9f9;
+			outline: none;
+			text-align: center;
+			width: 100%;
+		}
+
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		textarea:focus {
+			border-color: #ccc;
+		}
+
+		textarea {
+			resize: none;
+		}
+
+		button {
+			width: 100%;
+			margin-top: 20px;
+			padding: 12px 24px;
+			font-size: 18px;
+			font-weight: bold;
+			color: #6a0dad;
+			background-color: transparent;
+			border: 2px solid #6a0dad;
+			border-radius: 30px;
+			cursor: pointer;
+			outline: none;
+			transition: background-color 0.3s, color 0.3s;
+		}
+
+		button:hover {
+			background-color: #6a0dad;
+			color: #fff;
+		}
+	}
+
+	/* End of contact page */
+
+	/* About me page */
+
+	#aboutMe {
+		#h1About {
+			border-bottom: 2px solid #6a0dad;
+			margin-top: 80px;
+			font-size: 30px;
+			color: black;
+		}
+		#welcome {
+			margin: 20px 30px;
+			font-size: xx-large;
+			font-weight: bold;
+		}
+		#aboutMeContent {
+			text-align: left;
+			margin: 0 50px;
+			font-size: 20px;
+		}
+		#funFacts {
+			margin: 20px 30px;
+			font-size: xx-large;
+			font-weight: bold;
+		}
+		#funFactsP {
+			text-align: left;
+			margin: 0 50px;
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	/* End of About m page */
+}
+/* Larger Displays */
+
+@media (min-width: 1024px) {
+	/* About me page */
+
+	#aboutMe {
+		#h1About {
+			border-bottom: 2px solid #6a0dad;
+			margin-top: 80px;
+			font-size: 30px;
+			color: black;
+		}
+		#welcome {
+			margin: 20px 30px;
+			font-size: xx-large;
+			font-weight: bold;
+		}
+		#aboutMeContent {
+			text-align: left;
+			margin: 0 50px;
+			font-size: 20px;
+		}
+		#funFacts {
+			margin: 20px 30px;
+			font-size: xx-large;
+			font-weight: bold;
+		}
+		#funFactsP {
+			text-align: left;
+			margin: 0 50px;
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	/* End of About m page */
+	#myLogo {
+		border-radius: 3px;
+	}
+	.menu-container {
+		position: fixed;
+		top: 5px;
+		right: 5px;
+		margin-right: 0;
+		width: 30px;
+	}
+	.menu-button {
+		width: 25px;
+		height: 25px;
+		position: relative;
+		cursor: pointer;
+		transition: all 0.4s ease;
+	}
+	/* Burger menu lines */
+	.menu-button::before,
+	.menu-button::after,
+	.middle-line {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 0.7px;
+		background-color: black;
+		transition: all 0.4s ease;
+	}
+	/* Position lines */
+	.menu-button::before {
+		top: 3px;
+		left: 0;
+	}
+	.menu-button::after {
+		bottom: 3px;
+		left: 0;
+	}
+	.middle-line {
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+	/* Open menu - animate into X*/
+	.menu-button.active {
+		border-radius: 50%;
+	}
+	.menu-button.active::before {
+		transform: rotate(45deg) translate(6.3px, 6.3px);
+	}
+	.menu-button.active::after {
+		transform: rotate(-45deg) translate(6.3px, -6.3px);
+	}
+
+	.middle-line {
+		opacity: 1;
+	}
+
+	.menu-button.active .middle-line {
+		opacity: 0;
+	}
+
+	/* Hidden menu */
+	.menu-list {
+		width: fit-content;
+		list-style: none;
+		padding: 0;
+		margin: 20px 0 0;
+		transform: translateX(-40%); /* Initially off-screen */
+		opacity: 0;
+		transition: all 0.5s ease; /* Sliding and fading effect */
+	}
+
+	/* Show menu */
+	.menu-list.active {
+		transform: translateX(-70px); /* Slides into view */
+		opacity: 1; /* Fade in */
+	}
+
+	.menu-list li {
+		margin: 10px 0;
+		background-color: #fff;
+		padding: 10px;
+		border: 1px solid #6a0dad;
+		border-radius: 3px;
+		opacity: 1;
+		transition: all 0.5s ease;
+	}
+	.menu-list li:hover {
+		transform: translateX(-20px);
+		transform: scale(110%);
+		transition: all 0.5s ease;
+	}
+	#contact #introduction {
+		margin: 100px 20px 20px;
+		font-size: 20px;
+	}
+	#links a img {
+		width: 40px;
+	}
+	/* Projects section */
+	#projects {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		grid-template-columns: repeat(2, 40%);
+		grid-template-rows: auto 1fr 1fr;
+		gap: 20px;
+		padding: 20px;
+		text-align: center;
+		font-size: 1.5em;
+	}
+	.projectWrapper {
+		margin: 20px 0;
+		position: relative;
+		overflow: hidden;
+		border-radius: 5px;
+		transition: transform 0.3s ease;
+	}
+	.projectDescShow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.7);
+		color: white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+	.projectWrapper:hover .projectDescShow {
+		opacity: 1;
+	}
+	.projectDescShow p {
+		font-size: 1.2em;
+		margin: 10px 0;
+	}
+
+	.projectDescShow .button {
+		margin: 5px;
+		padding: 8px 16px;
+		color: white;
+		text-decoration: none;
+		border: 2px solid #45a29e;
+		border-radius: 5px;
+		background-color: transparent;
+		transition: background-color 0.3s, color 0.3s;
+	}
+	.projectDescShow .button:hover {
+		background-color: #45a29e;
+		color: white;
+	}
+	#projects h2 {
+		grid-column: span 2;
+		font-size: 1.5em;
+		text-align: center;
+	}
+	#project1 {
+		border-radius: 5px;
+		height: 200px;
+		background-image: url(../imgs/fireship.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	#project2 {
+		border-radius: 5px;
+		height: 200px;
+		background-image: url(../imgs/tic-tac-toe.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	#project3 {
+		border-radius: 5px;
+		height: 200px;
+		background-image: url(../imgs/streaming-example.webp);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	#project4 {
+		border-radius: 5px;
+		height: 200px;
+		background-image: url(../imgs/todolistproj.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	header {
+		margin: 40px 0;
+	}
+	h1 {
+		font-family: "Inter";
+		font-size: 150px;
+		color: #66fcf1;
+		text-align: center;
+		margin: 0;
+	}
+	h2 {
+		margin: 0 0 40px 0;
+		text-align: center;
+		font-size: 25px;
+	}
+	/* Intro section */
+	#introduction {
+		margin: 20px 0;
+		padding: 15px;
+		padding: 0 30px;
+		font-size: 50px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	#aboutWrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: fit-content;
+		font-size: 30px;
+		width: 80%;
+	}
+	#vertical {
+		border-left: 2px solid grey;
+		height: 100%;
+	}
+	#vertical p {
+		padding-left: 10px;
+	}
+	#links {
+		z-index: 1;
+		position: fixed;
+		top: 5px;
+		left: 5px;
+	}
+	footer {
+		border: 3px solid #6a0dad;
+		border-radius: 10px;
+		padding: 20px;
+		text-align: center;
+		font-size: 1.2em;
+		font-family: Arial, sans-serif;
+		margin: 50px;
+		background-color: #f7f2f9; /* Light background to contrast with border */
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+	}
+
+	#borderDiv {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	#mail {
+		display: flex;
+		align-items: center;
+		gap: 8px; /* Space between text and icon */
+		padding: 5px 15px;
+		border-radius: 3px;
+		border: 2px solid #6a0dad;
+		background-color: white;
+		transition: background-color 0.3s ease, border-color 0.3s ease;
+	}
+
+	#mail:hover {
+		background-color: #6a0dad;
+		border-color: #6a0dad;
+	}
+
+	#mail p {
+		margin: 0;
+		font-weight: bold;
+		color: #6a0dad;
+		transition: color 0.3s ease;
+	}
+
+	#mail:hover p {
+		color: #ffffff;
+	}
+
+	#mail img {
+		transition: transform 0.3s ease;
+	}
+
+	#mail:hover img {
+		transform: scale(1.1); /* Slightly increase icon size on hover */
+	}
+
+	#mail a {
+		display: flex;
+		align-items: center;
+		color: inherit;
+		text-decoration: none;
+	}
+
+	@keyframes appear {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(-5px);
+		}
+	}
+	.animation {
+		animation: appear linear forwards;
+		animation-timeline: view();
+		animation-range: entry 0% cover 40%;
+	}
+	.footerAppear {
+		animation: appear 0.6s ease forwards;
+		animation-timeline: view();
+		animation-range: entry 0 cover 30%;
+	}
+
+	/* Contact Page */
+	#contact {
+		#introduction p {
+			text-align: center;
+			font-size: 1.5em;
+		}
+		.form-container {
+			display: flex;
+			justify-content: center;
+			border-top: 2px solid #6a0dad;
+			width: 100vw;
+			height: 100vh;
+			background-color: #ffffff;
+		}
+
+		.input-group {
+			display: flex;
+			flex-direction: column;
+			margin: 20px 0;
+			width: 400px;
+		}
+		.input-group label {
+			margin: 0 10px;
+		}
+		label {
+			font-size: 16px;
+			color: #666;
+		}
+
+		input[type="text"] {
+			padding: 10px;
+			font-size: 16px;
+			border: 1px solid #ddd;
+			border-radius: 6px;
+			background-color: #f9f9f9;
+			outline: none;
+			width: 100%;
+		}
+		input[type="email"] {
+			padding: 10px;
+			font-size: 16px;
+			border: 1px solid #ddd;
+			border-radius: 6px;
+			background-color: #f9f9f9;
+			outline: none;
+			width: 100%;
+		}
+		textarea {
+			padding: 10px;
+			font-size: 16px;
+			border: 1px solid #ddd;
+			border-radius: 6px;
+			background-color: #f9f9f9;
+			outline: none;
+			text-align: center;
+			width: 100%;
+		}
+
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		textarea:focus {
+			border-color: #ccc;
+		}
+
+		textarea {
+			resize: none;
+		}
+
+		button {
+			width: 100%;
+			margin-top: 20px;
+			padding: 12px 24px;
+			font-size: 18px;
+			font-weight: bold;
+			color: #6a0dad;
+			background-color: transparent;
+			border: 2px solid #6a0dad;
+			border-radius: 30px;
+			cursor: pointer;
+			outline: none;
+			transition: background-color 0.3s, color 0.3s;
+		}
+
+		button:hover {
+			background-color: #6a0dad;
+			color: #fff;
+		}
+	}
+}
+a {
+	color: #6a0dad;
+	text-decoration: none;
+}
+
+/* adding spin effect to logo */
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+#myLogo:hover {
+	animation: spin 0.7s ease-in-out;
+}
