@@ -901,23 +901,26 @@
 			color: black;
 		}
 		#welcome {
-			margin: 20px 30px;
+			margin: 40px;
 			font-size: xx-large;
 			font-weight: bold;
+			text-align: center;
 		}
 		#aboutMeContent {
+			line-height: 30px;
 			text-align: left;
-			margin: 0 50px;
+			margin: 0 500px;
 			font-size: 20px;
 		}
 		#funFacts {
-			margin: 20px 30px;
+			margin: 40px;
 			font-size: xx-large;
 			font-weight: bold;
+			text-align: center;
 		}
 		#funFactsP {
 			text-align: left;
-			margin: 0 50px;
+			margin: 0 500px;
 			font-size: 20px;
 			margin-bottom: 20px;
 		}
