@@ -81,6 +81,7 @@
 	.menu-list.active {
 		transform: translateX(-70px); /* Slides into view */
 		opacity: 1; /* Fade in */
+		z-index: 11;
 	}
 	.menu-list li {
 		text-align: center;
@@ -92,6 +93,7 @@
 		border-radius: 3px;
 		opacity: 1;
 		transition: all 0.5s ease;
+		z-index: 11;
 	}
 	.menu-list li:hover {
 		transform: translateX(-20px);
