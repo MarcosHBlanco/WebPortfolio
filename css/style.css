@@ -609,7 +609,7 @@
 		background-position: center;
 	}
 	#project3 {
-		background-image: url(../imgs/streaming-example.webp);
+		background-image: url(../imgs/streamio.png);
 		background-size: cover;
 		background-position: center;
 	}
@@ -1085,7 +1085,7 @@
 	}
 	#project1 {
 		border-radius: 5px;
-		height: 200px;
+		height: 350px;
 		background-image: url(../imgs/fireship.png);
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -1093,7 +1093,7 @@
 	}
 	#project2 {
 		border-radius: 5px;
-		height: 200px;
+		height: 350px;
 		background-image: url(../imgs/tic-tac-toe.png);
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -1101,18 +1101,19 @@
 	}
 	#project3 {
 		border-radius: 5px;
-		height: 200px;
-		background-image: url(../imgs/streaming-example.webp);
+		height: 350px;
+		background-image: url(../imgs/streamio.png);
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: center;
+		background-position: top;
 	}
 	#project4 {
 		border-radius: 5px;
-		height: 200px;
+		height: 350px;
 		background-image: url(../imgs/todolistproj.png);
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-position: center;
 	}
 	header {
 		margin: 40px 0;
