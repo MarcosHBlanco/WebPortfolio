@@ -422,7 +422,7 @@ body {
 }
 
 /* Medium Displays */
-@media (601px <= width <= 1023px) {
+@media (601px <= width <= 992px) {
 	body {
 		margin: 0;
 		padding: 0;
@@ -625,7 +625,7 @@ body {
 	#project1 {
 		background-image: url(../imgs/fireship.png);
 		background-size: cover;
-		background-position: center;
+		background-repeat: no-repeat;
 	}
 	#project2 {
 		background-image: url(../imgs/tic-tac-toe.png);
@@ -639,9 +639,9 @@ body {
 	}
 	#project4 {
 		background-image: url(../imgs/todolistproj.png);
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
-		background-position: center;
+		background-position: left;
 	}
 	.form-container {
 		width: inherit;
@@ -933,7 +933,7 @@ body {
 }
 /* Larger Displays */
 
-@media (min-width: 1024px) {
+@media (min-width: 993px) {
 	/* About me page */
 
 	#aboutMe {
@@ -1158,7 +1158,7 @@ body {
 		height: 350px;
 		background-image: url(../imgs/todolistproj.png);
 		background-repeat: no-repeat;
-		background-size: cover;
+		background-size: contain;
 		background-position: center;
 	}
 	header {
