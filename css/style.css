@@ -1,3 +1,7 @@
+body {
+	margin: 0;
+}
+
 /* Small Displays */
 
 @media (max-width: 600px) {
@@ -317,7 +321,7 @@
 		font-size: 1.2em;
 		font-family: Arial, sans-serif;
 		margin: 50px;
-		background-color: rgb(9, 23, 70);
+		background-color: rgb(34, 4, 59);
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 		color: white;
 	}
@@ -698,15 +702,17 @@
 		color: #fff;
 	}
 	footer {
-		border: 3px solid #6a0dad;
+		position: absolute;
+		top: -100px;
 		border-radius: 10px;
 		padding: 20px;
 		text-align: center;
 		font-size: 1.2em;
 		font-family: Arial, sans-serif;
 		margin: 50px;
-		background-color: #ffffff; /* Light background to contrast with border */
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+		background-color: rgb(34, 4, 59);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+		color: white;
 	}
 	#borderDiv {
 		display: flex;
@@ -715,6 +721,23 @@
 		gap: 10px;
 		max-width: 600px;
 		margin: 0 auto;
+	}
+	#journey {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		justify-content: center;
+		display: flex;
+		align-items: center;
+		margin-bottom: 80px;
+	}
+	#journey-p {
+		color: white;
+		text-align: center;
+		font-family: "Edu AU VIC WA NT Hand", cursive;
+		font-optical-sizing: auto;
+		font-weight: 500;
+		font-style: normal;
 	}
 	#mail {
 		display: flex;
@@ -748,7 +771,7 @@
 	}
 
 	#mail:hover img {
-		transform: scale(1.1); /* Slightly increase icon size on hover */
+		transform: scale(1.2); /* Slightly increase icon size on hover */
 	}
 	.animation {
 		margin: 20px 0;
@@ -782,7 +805,7 @@
 	.footerAppear {
 		animation: appear linear forwards;
 		animation-timeline: view();
-		animation-range: entry 0 cover 10%;
+		animation-range: entry 0 cover 20%;
 	}
 	/* Contact Page */
 	#contact {
@@ -1186,24 +1209,42 @@
 		left: 5px;
 	}
 	footer {
-		border: 3px solid #6a0dad;
-		border-radius: 10px;
+		position: absolute;
+		top: -100px;
+		border-radius: 15px;
 		padding: 20px;
 		text-align: center;
 		font-size: 1.2em;
 		font-family: Arial, sans-serif;
-		margin: 50px;
-		background-color: #f7f2f9; /* Light background to contrast with border */
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+		margin: 80px;
+		background-color: rgb(34, 4, 59);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+		color: white;
 	}
-
 	#borderDiv {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 10px;
 		max-width: 600px;
-		margin: 0 auto;
+		margin: 0;
+	}
+	#journey {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		justify-content: center;
+		display: flex;
+		align-items: center;
+		margin-bottom: 80px;
+	}
+	#journey-p {
+		color: white;
+		text-align: center;
+		font-family: "Edu AU VIC WA NT Hand", cursive;
+		font-optical-sizing: auto;
+		font-weight: 500;
+		font-style: normal;
 	}
 
 	#mail {
