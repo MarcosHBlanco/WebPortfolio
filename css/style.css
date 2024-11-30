@@ -309,15 +309,17 @@
 		color: #fff;
 	}
 	footer {
-		border: 3px solid #6a0dad;
+		position: absolute;
+		top: -100px;
 		border-radius: 10px;
 		padding: 20px;
 		text-align: center;
 		font-size: 1.2em;
 		font-family: Arial, sans-serif;
 		margin: 50px;
-		background-color: #ffffff; /* Light background to contrast with border */
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+		background-color: rgb(9, 23, 70);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+		color: white;
 	}
 	#borderDiv {
 		display: flex;
@@ -370,6 +372,24 @@
 		color: inherit;
 		text-decoration: none;
 	}
+	#journey {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		justify-content: center;
+		display: flex;
+		align-items: center;
+		margin-bottom: 80px;
+	}
+	#journey-p {
+		color: white;
+		text-align: center;
+		font-family: "Edu AU VIC WA NT Hand", cursive;
+		font-optical-sizing: auto;
+		font-weight: 500;
+		font-style: normal;
+	}
+
 	.animation:hover {
 		margin: 20px 0;
 		background-image: none;
