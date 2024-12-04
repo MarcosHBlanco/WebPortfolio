@@ -107,10 +107,11 @@
 		margin: 10px 0;
 	}
 	#links a img {
-		width: 40px;
+		width: 35px;
 	}
-	#links :first-child {
-		margin-right: 10px;
+
+	#links :last-child {
+		height: 35px;
 	}
 	body {
 		background-color: #f0f0f5;
@@ -386,10 +387,11 @@
 		margin: 10px 0;
 	}
 	#links a img {
-		width: 40px;
+		width: 35px;
 	}
-	#links :first-child {
-		margin-right: 10px;
+
+	#links :last-child {
+		height: 35px;
 	}
 }
 a {

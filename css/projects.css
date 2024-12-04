@@ -102,10 +102,11 @@ a {
 	margin: 10px 0;
 }
 #links a img {
-	width: 40px;
+	width: 35px;
 }
-#links :first-child {
-	margin-right: 10px;
+
+#links :last-child {
+	height: 35px;
 }
 .projects-container {
 	display: flex;
