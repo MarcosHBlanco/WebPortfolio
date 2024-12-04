@@ -5,6 +5,15 @@ body {
 /* Small Displays */
 
 @media (max-width: 600px) {
+	#hero {
+		width: 95%;
+		height: 300px;
+		margin: 0 10px;
+		background-image: url(../imgs/workstation.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
 	/* About me page */
 	#aboutMe {
 		#h1About {
@@ -130,6 +139,7 @@ body {
 	header {
 		margin: 40px 0;
 	}
+
 	h1 {
 		font-family: "Inter";
 		font-size: 100px;
@@ -140,18 +150,18 @@ body {
 	h2 {
 		margin: 0 0 40px 0;
 		text-align: center;
-		font-size: 15px;
+		font-size: 25px;
 	}
 	#contact #introduction {
 		margin: 100px 20px 20px;
 		font-size: 20px;
 	}
 	#introduction {
-		margin: 40px 0;
-		padding: 15px;
+		margin: 20px 0;
+		padding: 5px;
 		text-align: center;
 		padding: 0 30px;
-		font-size: 24px;
+		font-size: 20px;
 	}
 	#aboutWrapper {
 		display: flex;
@@ -1617,6 +1627,15 @@ body {
 			color: #fff;
 		}
 	}
+	#hero {
+		width: 95%;
+		height: 300px;
+		margin: 100px 10px;
+		background-image: url(../imgs/workstation.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
 }
 a {
 	color: #6a0dad;
@@ -1635,4 +1654,31 @@ a {
 }
 #myLogo:hover {
 	animation: spin 0.7s ease-in-out;
+}
+
+.typed {
+	overflow: hidden;
+	white-space: nowrap;
+	width: 0;
+	border-right: 2px solid;
+	animation: typing 2s steps(25, end) forwards, blinking 1s;
+}
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+@keyframes blinking {
+	0% {
+		border-color: transparent;
+	}
+	50% {
+		border-color: black;
+	}
+	100% {
+		border-color: transparent;
+	}
 }
