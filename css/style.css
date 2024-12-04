@@ -175,10 +175,11 @@ body {
 		margin: 10px 0;
 	}
 	#links a img {
-		width: 40px;
+		width: 35px;
 	}
-	#links :first-child {
-		margin-right: 10px;
+
+	#links :last-child {
+		height: 35px;
 	}
 	#projects {
 		margin: 40px 0;
@@ -567,10 +568,11 @@ body {
 		margin: 10px 0;
 	}
 	#links a img {
-		width: 40px;
+		width: 35px;
 	}
-	#links :first-child {
-		margin-right: 10px;
+
+	#links :last-child {
+		height: 35px;
 	}
 	#projects {
 		margin: 40px 0;
@@ -1186,9 +1188,7 @@ body {
 		margin: 100px 20px 20px;
 		font-size: 20px;
 	}
-	#links a img {
-		width: 40px;
-	}
+
 	/* Projects section */
 	#projects h2 {
 		color: #6a0dad;
@@ -1331,6 +1331,12 @@ body {
 		position: fixed;
 		top: 5px;
 		left: 5px;
+	}
+	#links a img {
+		width: 35px;
+	}
+	#links :last-child {
+		height: 35px;
 	}
 	footer {
 		position: absolute;
