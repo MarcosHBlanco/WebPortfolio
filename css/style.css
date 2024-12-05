@@ -433,6 +433,21 @@ body {
 		animation-timeline: view();
 		animation-range: entry 0 cover 10%;
 	}
+	.typed {
+		overflow: hidden;
+		white-space: nowrap;
+		width: 35ch;
+		text-align: center;
+		animation: typing 3s steps(35) forwards;
+	}
+	@keyframes typing {
+		from {
+			width: 0;
+		}
+		to {
+			width: 35ch;
+		}
+	}
 }
 
 /* Medium Displays */
@@ -535,7 +550,7 @@ body {
 	}
 	h1 {
 		font-family: "Inter";
-		font-size: 100px;
+		font-size: 60px;
 		color: #66fcf1;
 		text-align: center;
 		margin: 0;
@@ -1300,7 +1315,7 @@ body {
 	}
 	h1 {
 		font-family: "Inter";
-		font-size: 90px;
+		font-size: 30px;
 		color: #66fcf1;
 		text-align: center;
 		margin: 0;
@@ -1664,15 +1679,26 @@ a {
 .typed {
 	overflow: hidden;
 	white-space: nowrap;
-	width: 35ch;
+	width: 50ch;
 	text-align: center;
-	animation: typing 3s steps(35) forwards;
+	animation: typing 5s steps(50) forwards, blinking 1s;
 }
 @keyframes typing {
 	from {
 		width: 0;
 	}
 	to {
-		width: 35ch;
+		width: 50ch;
+	}
+}
+@keyframes blinking {
+	0% {
+		color: transparent;
+	}
+	50% {
+		color: black;
+	}
+	100% {
+		color: transparent;
 	}
 }
