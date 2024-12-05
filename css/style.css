@@ -1300,7 +1300,7 @@ body {
 	}
 	h1 {
 		font-family: "Inter";
-		font-size: 150px;
+		font-size: 90px;
 		color: #66fcf1;
 		text-align: center;
 		margin: 0;
@@ -1314,8 +1314,7 @@ body {
 	#introduction {
 		margin: 20px 0;
 		padding: 15px;
-		padding: 0 30px;
-		font-size: 50px;
+		font-size: 35px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -1655,30 +1654,25 @@ a {
 #myLogo:hover {
 	animation: spin 0.7s ease-in-out;
 }
+.typed-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
 
 .typed {
 	overflow: hidden;
 	white-space: nowrap;
-	width: 0;
-	border-right: 2px solid;
-	animation: typing 2s steps(25, end) forwards, blinking 1s;
+	width: 35ch;
+	text-align: center;
+	animation: typing 3s steps(35) forwards;
 }
 @keyframes typing {
 	from {
 		width: 0;
 	}
 	to {
-		width: 100%;
-	}
-}
-@keyframes blinking {
-	0% {
-		border-color: transparent;
-	}
-	50% {
-		border-color: black;
-	}
-	100% {
-		border-color: transparent;
+		width: 35ch;
 	}
 }
