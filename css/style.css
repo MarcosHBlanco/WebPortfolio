@@ -268,6 +268,12 @@ body {
 		background-position: center;
 		background-repeat: no-repeat;
 	}
+	#project5 {
+		background-image: url(../imgs/arrows-and-monsters-startscreen.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
 	.form-container {
 		width: inherit;
 		height: 100vh;
@@ -685,6 +691,12 @@ body {
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: left;
+	}
+	#project5 {
+		background-image: url(../imgs/arrows-and-monsters-startscreen.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 	.form-container {
 		width: inherit;
@@ -1315,6 +1327,14 @@ body {
 		border-radius: 5px;
 		height: 350px;
 		background-image: url(../imgs/todolistproj.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
+	#project5 {
+		border-radius: 5px;
+		height: 350px;
+		background-image: url(../imgs/arrows-and-monsters-startscreen.jpg);
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: center;
